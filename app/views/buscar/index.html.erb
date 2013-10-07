@@ -1,0 +1,108 @@
+<form class="form-horizontal">
+  <fieldset>
+
+    <!-- Form Name -->
+    <legend>Búsqueda</legend>
+
+    <!-- Text input-->
+    <div class="control-group">
+      <label class="control-label" for="desde" >Desde</label>
+      <div class="controls">
+        <input id="desde" name="desde" type="text" class="input-xlarge" data-behaviour='datepicker'>
+        <p class="help-block">Fecha inicial</p>
+      </div>
+    </div>
+
+    <!-- Text input-->
+    <div class="control-group">
+      <label class="control-label" for="hasta">Hasta</label>
+      <div class="controls">
+        <input id="hasta" name="hasta" type="text" class="input-xlarge" data-behaviour='datepicker'>
+        <p class="help-block">Fecha final</p>
+      </div>
+    </div>
+    <script type="text/javascript">
+      $(document).ready(function(){
+          $('[data-behaviour~=datepicker]').datepicker();
+          })
+    </script>
+    <!-- Select Basic -->
+    <div class="control-group">
+      <label class="control-label" for="departamento">Departamento</label>
+      <div class="controls">
+        <select id="departamento" name="departamento" class="input-xlarge">
+          <option>Amazonas</option>
+        </select>
+      </div>
+    </div>
+
+    <!-- Select Basic -->
+    <div class="control-group">
+      <label class="control-label" for="municipio">Municipio</label>
+      <div class="controls">
+        <select id="municipio" name="municipio" class="input-xlarge">
+          <option>El Encanto</option>
+        </select>
+      </div>
+    </div>
+
+    <!-- Select Basic -->
+    <div class="control-group">
+      <label class="control-label" for="codigoprin">Código Principal</label>
+      <div class="controls">
+        <select id="codigoprin" name="codigoprin" class="input-xlarge">
+          <option>A10</option>
+        </select>
+      </div>
+    </div>
+
+    <!-- Select Basic -->
+    <div class="control-group">
+      <label class="control-label" for="codigosec1">Códio Secundario 1</label>
+      <div class="controls">
+        <select id="codigosec1" name="codigosec1" class="input-xlarge">
+          <option>A10</option>
+        </select>
+      </div>
+    </div>
+
+    <!-- Select Basic -->
+    <div class="control-group">
+      <label class="control-label" for="codigosec2">Código Secundario 2</label>
+      <div class="controls">
+        <select id="codigosec2" name="codigosec2" class="input-xlarge">
+          <option>A10</option>
+        </select>
+      </div>
+    </div>
+
+    <!-- Select Basic -->
+    <div class="control-group">
+      <label class="control-label" for="fuente">Fuente</label>
+      <div class="controls">
+        <select id="fuente" name="fuente" class="input-xlarge">
+          <option>El Espectador</option>
+        </select>
+      </div>
+    </div>
+
+    <!-- Button -->
+    <% if current_usuario %>
+    <div class="control-group">
+      <label class="control-label" for="singlebutton"></label>
+      <div class="controls">
+        <a href="/resultados/" class="btn btn-primary">Buscar  <i class="icon-search"></i></a>
+      </div>
+    </div>
+    <% else %>
+    <div class="control-group">
+      <label class="control-label" for="singlebutton"></label>
+      <div class="controls">
+        <a href="/usuarios/sign_in/" class="btn btn-primary">Iniciar Sesión <i class="icon-user"></i></a>
+      </div>
+    </div>
+
+  <% end %>
+
+  </fieldset>
+</form> 

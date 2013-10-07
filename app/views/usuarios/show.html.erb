@@ -1,0 +1,64 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nombre:</strong>
+  <%= @usuario.nombre %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @usuario.email %>
+</p>
+
+<p>
+  <strong>Encrypted password:</strong>
+  <%= @usuario.encrypted_password %>
+</p>
+
+<p>
+  <strong>Reset password token:</strong>
+  <%= @usuario.reset_password_token %>
+</p>
+
+<p>
+  <strong>Reset password sent at:</strong>
+  <%= @usuario.reset_password_sent_at %>
+</p>
+
+<p>
+  <strong>Remember created at:</strong>
+  <%= @usuario.remember_created_at %>
+</p>
+
+<p>
+  <strong>Sign in count:</strong>
+  <%= @usuario.sign_in_count %>
+</p>
+
+<p>
+  <strong>Current sign in at:</strong>
+  <%= @usuario.current_sign_in_at %>
+</p>
+
+<p>
+  <strong>Last sign in at:</strong>
+  <%= @usuario.last_sign_in_at %>
+</p>
+
+<p>
+  <strong>Current sign in ip:</strong>
+  <%= @usuario.current_sign_in_ip %>
+</p>
+
+<p>
+  <strong>Last sign in ip:</strong>
+  <%= @usuario.last_sign_in_ip %>
+</p>
+
+<p>
+  <strong>Roles_mascara:</strong>
+  <%= @usuario.roles_mascara %>
+</p>
+
+<%= link_to 'Edit', edit_usuario_path(@usuario) %> |
+<%= link_to 'Back', usuarios_path %>

@@ -1,0 +1,33 @@
+<article> 
+<h1>Formulario de Contacto</h1> 
+
+<div class="span6">
+
+	<form>
+		<div class="controls controls-row">
+			<input id="name" name="name" type="text" class="span3" placeholder="Nombre"> 
+			<input id="email" name="email" type="email" class="span3" placeholder="Correo electrónico">
+		</div>
+		<div class="controls controls-row">
+			<span class="span1">Interés:</span>
+			<%= select_tag(:razon, options_for_select([
+			['Plan Personal por $100.000 anual', 1], 
+			['Plan Organizacional hasta 10 usuarios por $500.000 anual', 2],
+			['Plan Organizacional hasta 1000 usuarios por $2\'000.000 anual', 3],
+			['Plan Organizacional usuarios ilimitados por $10\'000.000 anual', 4],
+			['Cuenta de prueba gratuita por un mes', 6],
+			['Otros  planes', 7],
+			['Sugerencias, Comentarios, Preguntas', 8]],1),
+			class: "span4"
+			) %>
+		</div>
+		<div class="controls">
+			<textarea id="message" name="message" class="span6" placeholder="Su Mensaje" rows="5"></textarea>
+		</div>
+
+		<div class="controls">
+			<button id="contact-submit" type="submit" class="btn btn-primary input-medium pull-right">Enviar  <i class="icon-envelope-alt"></i></button>
+		</div>
+	</form>
+</div>
+</article>

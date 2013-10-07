@@ -1,0 +1,12 @@
+<article>
+<h1>Prototipo de acceso al Archivo de Prensa del CINEP</h1>
+<ul>
+<%- if current_usuario.nil?  %>
+	<li><a href="usuarios/sign_in">Iniciar Sesión</a>
+	<li><a href="usuarios/sign_up">Registrarse</a>
+<%- else  %>
+	<li>Usuario <%= current_usuario.email %>
+<% end -%>
+
+</ul>
+</article>
